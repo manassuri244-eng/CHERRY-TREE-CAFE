@@ -1,0 +1,875 @@
+ <!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Cherry Tree Bakery &amp; Cafe | Hazratganj, Lucknow</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:auto;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#fffaf6;
+    color:#2b211c;
+}
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:100;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 7%;
+    background:#ffffff;
+    backdrop-filter:none;
+    box-shadow:0 5px 25px rgba(0,0,0,.08);
+}
+
+.logo{
+    font-size:25px;
+    font-weight:800;
+    color:#9e2344;
+}
+
+nav a{
+    margin-left:25px;
+    text-decoration:none;
+    color:#2b211c;
+    font-weight:600;
+}
+
+.hero{
+    min-height:88vh;
+    display:flex;
+    align-items:center;
+    padding:70px 7%;
+    color:white;
+    background:
+    linear-gradient(90deg,rgba(25,15,10,.78),rgba(25,15,10,.25)),
+    url("https://dineout-media-assets.swiggy.com/swiggy/image/upload/fl_lossy%2Cf_auto%2Cq_auto%2Cw_600%2Ch_468/DINEOUT_ALL_RESTAURANTS/IMAGES/RESTAURANT_IMAGE_SERVICE/2025/3/30/f4fb2653-b676-459b-8927-7ba1158210b4_image130c756431ab704c7cbb745cd5ef5d1728.JPG");
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    max-width:700px;
+}
+
+.tag{
+    letter-spacing:4px;
+    font-size:13px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(48px,8vw,90px);
+    line-height:.95;
+    margin-bottom:25px;
+}
+
+.hero p{
+    font-size:19px;
+    line-height:1.6;
+    margin-bottom:30px;
+}
+
+.buttons a{
+    display:inline-block;
+    padding:15px 25px;
+    border-radius:40px;
+    text-decoration:none;
+    font-weight:bold;
+    margin-right:10px;
+}
+
+.primary{
+    background:#b83250;
+    color:white;
+}
+
+.secondary{
+    background:white;
+    color:#2b211c;
+}
+
+.section{
+    padding:90px 7%;
+    text-align:center;
+}
+
+.section h2{
+    font-size:45px;
+    margin-bottom:12px;
+}
+
+.section-intro{
+    color:#746963;
+    font-size:18px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:25px;
+    margin-top:45px;
+}
+
+.card{
+    background:white;
+    padding:35px 25px;
+    border-radius:25px;
+    box-shadow:0 12px 35px rgba(50,25,15,.09);
+    transition:none;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.icon{
+    font-size:42px;
+    margin-bottom:18px;
+}
+
+.card h3{
+    font-size:22px;
+    margin-bottom:12px;
+}
+
+.card p{
+    color:#746963;
+    line-height:1.6;
+}
+
+.visit{
+    background:#2b211c;
+    color:white;
+}
+
+.visit p{
+    color:#ddd0c9;
+    line-height:1.8;
+}
+
+.info-box{
+    max-width:700px;
+    margin:35px auto 0;
+    padding:35px;
+    border-radius:25px;
+    background:rgba(255,255,255,.08);
+}
+
+footer{
+    background:#170f0b;
+    color:white;
+    padding:35px 7%;
+    text-align:center;
+}
+
+#chat-button{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    width:65px;
+    height:65px;
+    border:0;
+    border-radius:50%;
+    background:#b83250;
+    color:white;
+    font-size:28px;
+    cursor:pointer;
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+@media(max-width:700px){
+    nav{
+        padding:15px 5%;
+    }
+
+    nav a{
+        margin-left:10px;
+        font-size:13px;
+    }
+
+    .hero{
+        min-height:80vh;
+        padding:50px 6%;
+    }
+
+    .hero h1{
+        font-size:52px;
+    }
+
+    .section{
+        padding:65px 6%;
+    }
+}/* PREMIUM MENU */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 35px;
+}
+
+.menu-category {
+  background: #fff;
+  border-radius: 20px;
+  padding: 26px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.menu-category h3 {
+    .menu-category h3 {
+  display: block;
+  margin-bottom: 18px;
+}
+  margin: 0 0 18px;
+  font-size: 22px;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 14px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.menu-item-name {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.menu-item-desc {
+  color: #777;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.menu-price {
+  font-weight: 700;
+  white-space: nowrap;
+  font-size: 15px;
+}
+
+.menu-note {
+  text-align: center;
+  color: #777;
+  font-size: 13px;
+  margin-top: 25px;
+}
+
+/* PREMIUM GALLERY */
+.gallery-section{background:#fffaf6}
+.gallery-grid{display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:18px;margin-top:40px}
+.gallery-card{position:relative;min-height:260px;border-radius:24px;overflow:hidden;background:#ddd;box-shadow:0 16px 40px rgba(0,0,0,.12)}
+.gallery-card:first-child{min-height:540px;grid-row:span 2}
+.gallery-card img{width:100%;height:100%;object-fit:cover;display:block;transition:none}
+.gallery-card:hover img{transform:none}
+.gallery-overlay{position:absolute;inset:auto 0 0;padding:28px 22px 20px;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.75))}
+.gallery-overlay h3{margin:0 0 5px;font-size:21px}
+.gallery-overlay p{margin:0;font-size:13px;opacity:.9}
+.gallery-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:28px}
+.gallery-actions a{padding:13px 20px;border-radius:30px;text-decoration:none;font-weight:700}
+.gallery-actions .dark{background:#2b211c;color:#fff}
+.gallery-actions .light{background:#fff;color:#2b211c;border:1px solid #ddd}
+@media(max-width:800px){.gallery-grid{grid-template-columns:1fr 1fr}.gallery-card:first-child{min-height:360px;grid-row:auto;grid-column:span 2}}
+@media(max-width:520px){.gallery-grid{grid-template-columns:1fr}.gallery-card:first-child{grid-column:auto}}
+
+
+.gallery-link-card{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:30px;text-decoration:none;color:#fff;background:linear-gradient(145deg,#2b211c,#6f3040)!important}
+.gallery-icon{font-size:42px;margin-bottom:18px}
+.gallery-card-content h3{font-size:23px;margin:0 0 8px}
+.gallery-card-content p{font-size:14px;line-height:1.5;opacity:.9;margin:0 0 18px}
+.gallery-card-content span{display:inline-block;padding:10px 15px;border-radius:24px;background:#fff;color:#2b211c;font-size:13px;font-weight:700}
+
+
+/* QUICK ACTIONS */
+.quick-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin:30px auto 0;max-width:900px}
+.quick-actions a{display:inline-block;padding:14px 22px;border-radius:999px;text-decoration:none;font-weight:800;transition:none;box-shadow:0 8px 22px rgba(50,25,15,.10)}
+.quick-actions a:hover{transform:none}
+.quick-order{background:#b83250;color:#fff}.quick-wa{background:#fff;color:#2b211c;border:1px solid #ddd}.quick-call{background:#2b211c;color:#fff}.quick-map{background:#fff;color:#9e2344;border:1px solid #e2c3ca}
+.menu-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:35px}
+.menu-actions a{padding:14px 24px;border-radius:999px;text-decoration:none;font-weight:800}
+@media(max-width:520px){.quick-actions{gap:9px}.quick-actions a{width:100%;padding:13px 16px}.menu-actions a{width:100%}}
+
+#cafe-chat{position:fixed;right:25px;bottom:100px;width:min(360px,calc(100vw - 30px));background:#fff;border-radius:20px;box-shadow:0 18px 50px rgba(0,0,0,.25);overflow:hidden;z-index:1000;border:1px solid #eee}
+.chat-header{background:#2b211c;color:#fff;padding:16px;font-weight:800;display:flex;justify-content:space-between}.chat-messages{padding:15px;max-height:300px;overflow:auto}.bot-message,.user-message{padding:10px 12px;border-radius:14px;margin-bottom:9px;line-height:1.45}.bot-message{background:#f5eee9}.user-message{background:#b83250;color:#fff;margin-left:35px}.chat-input{display:flex;padding:10px;border-top:1px solid #eee;gap:8px}.chat-input input{flex:1;padding:11px;border:1px solid #ddd;border-radius:12px}.chat-input button{border:0;border-radius:12px;padding:0 15px;background:#b83250;color:#fff;font-size:18px}
+
+.chat-header button{background:none;border:0;color:#fff;font-size:25px;cursor:pointer}.chat-quick{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:12px}.chat-quick button{border:1px solid #eadbd2;background:#fff;border-radius:10px;padding:9px 6px;cursor:pointer;font-size:12px}.bot-message a{color:#9e2344;font-weight:800;text-decoration:none}.chat-input input:focus{outline:2px solid rgba(184,50,80,.18);border-color:#b83250}
+
+
+/* FINAL MOBILE RESPONSIVE FIX */
+html, body { width:100%; max-width:100%; overflow-x:hidden; }
+img { max-width:100%; height:auto; }
+
+@media (max-width: 700px){
+  nav{
+    position:sticky;
+    padding:12px 14px;
+    gap:10px;
+    flex-direction:column;
+    align-items:center;
+  }
+  .logo{font-size:21px; line-height:1.2; text-align:center;}
+  nav > div:last-child{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:6px 14px;
+  }
+  nav a{margin:0; font-size:13px; padding:4px 0;}
+
+  .hero{
+    min-height:72vh;
+    padding:56px 20px;
+    background-position:center;
+  }
+  .hero-content{width:100%; max-width:100%;}
+  .tag{font-size:11px; letter-spacing:2px;}
+  .hero h1{font-size:clamp(42px,13vw,58px); line-height:.98;}
+  .hero p{font-size:16px; line-height:1.5;}
+  .buttons{display:flex; flex-direction:column; gap:10px;}
+  .buttons a{width:100%; margin:0; text-align:center; padding:14px 18px;}
+
+  .section{padding:58px 16px;}
+  .section h2{font-size:34px; line-height:1.1;}
+  .section-intro{font-size:16px; line-height:1.5;}
+  .cards,.menu-grid{grid-template-columns:1fr; gap:16px;}
+  .card,.menu-category{padding:22px 18px;}
+
+  .menu-item{gap:8px; align-items:flex-start;}
+  .menu-item-name{font-size:14px; min-width:0;}
+  .menu-price{font-size:14px; flex-shrink:0;}
+
+  .gallery-grid{grid-template-columns:1fr !important; gap:14px;}
+  .gallery-card,
+  .gallery-card:first-child{grid-column:auto !important; grid-row:auto !important; min-height:260px;}
+  .gallery-link-card{padding:24px;}
+  .gallery-card-content h3{font-size:21px;}
+
+  .quick-actions{padding:0 16px; margin-top:20px;}
+  .quick-actions a{width:100%;}
+  .menu-actions{padding:0 4px;}
+  .menu-actions a{width:100%; text-align:center;}
+
+  #chat-button{right:16px; bottom:16px; width:58px; height:58px; font-size:24px;}
+  #cafe-chat{right:12px; bottom:86px; width:calc(100vw - 24px); max-width:none; border-radius:18px;}
+  .chat-messages{max-height:42vh;}
+  .chat-input input{min-width:0;}
+
+  footer{padding:28px 16px;}
+}
+
+@media (max-width: 380px){
+  nav > div:last-child{gap:4px 10px;}
+  nav a{font-size:12px;}
+  .hero{padding-left:16px; padding-right:16px;}
+  .hero h1{font-size:42px;}
+  .section h2{font-size:30px;}
+  .menu-item-name{font-size:13px;}
+  .menu-price{font-size:13px;}
+}
+
+/* STABLE DISPLAY FIX — prevents visual flicker on some laptop/mobile GPUs */
+*, *::before, *::after { animation: none !important; }
+html { scroll-behavior: auto !important; }
+nav { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
+img { transform: none !important; }
+
+/* V9 FINAL POLISH */
+.review-section{background:#fff;}
+.review-summary{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin:28px auto 8px;}
+.review-stat{background:#fffaf6;border:1px solid #eadbd2;border-radius:18px;padding:16px 22px;text-align:center;min-width:150px;box-shadow:0 8px 24px rgba(50,25,15,.06);}
+.review-stat strong{display:block;font-size:25px;color:#9e2344;margin-bottom:4px;}
+.review-stat span{font-size:12px;color:#6f625c;}
+.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px;}
+.review-card{background:#fffaf6;border:1px solid #eadbd2;border-radius:20px;padding:24px;box-shadow:0 10px 28px rgba(50,25,15,.06);}
+.review-stars{color:#b83250;letter-spacing:2px;font-size:15px;margin-bottom:12px;}
+.review-card p{font-size:15px;line-height:1.6;color:#403631;margin:0 0 14px;}
+.review-card small{color:#756861;font-weight:700;}
+.review-source{text-align:center;margin-top:22px;font-size:12px;color:#777;}
+.review-source a{color:#9e2344;font-weight:800;text-decoration:none;}
+.mobile-bottom-bar{display:none;}
+@media(max-width:700px){
+  .review-grid{grid-template-columns:1fr;}
+  .review-card{padding:20px;}
+  .review-summary{gap:10px;}
+  .review-stat{flex:1;min-width:130px;padding:14px 10px;}
+  .review-stat strong{font-size:22px;}
+  .mobile-bottom-bar{position:fixed;display:grid;grid-template-columns:repeat(4,1fr);left:0;right:0;bottom:0;height:64px;background:rgba(255,255,255,.98);border-top:1px solid #eadbd2;box-shadow:0 -8px 24px rgba(0,0,0,.12);z-index:1100;padding-bottom:env(safe-area-inset-bottom);}
+  .mobile-bottom-bar a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;text-decoration:none;color:#2b211c;font-size:10px;font-weight:800;}
+  .mobile-bottom-bar a:first-child{color:#2b211c;}
+  .mobile-bottom-bar a:nth-child(2){color:#167b45;}
+  .mobile-bottom-bar a:nth-child(3){color:#b83250;}
+  .mobile-bottom-bar a:nth-child(4){color:#9e2344;}
+  .mobile-bottom-bar .bar-icon{font-size:19px;line-height:1;}
+  body{padding-bottom:64px;}
+  #chat-button{bottom:78px !important;}
+  #cafe-chat{bottom:142px !important;}
+}
+@media(max-width:380px){.mobile-bottom-bar{height:60px}.mobile-bottom-bar a{font-size:9px}.mobile-bottom-bar .bar-icon{font-size:17px}body{padding-bottom:60px}#chat-button{bottom:74px !important}#cafe-chat{bottom:136px !important}}
+@media(min-width:701px){.review-card{transition:transform .18s ease,box-shadow .18s ease}.review-card:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(50,25,15,.10)}.gallery-card,.quick-actions a,.menu-category{transition:transform .18s ease,box-shadow .18s ease}.gallery-card:hover,.menu-category:hover{transform:translateY(-2px)}.quick-actions a:hover{transform:translateY(-2px)} }
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}.review-card,.gallery-card,.quick-actions a,.menu-category{transition:none!important}}
+</style>
+<meta content="The Cherry Tree Bakery &amp; Cafe in Hazratganj, Lucknow — cafe, bakery, desserts, coffee, meals and cakes. Visit 11, Habibullah Estate Road, 8 AM–11 PM." name="description"/><meta content="The Cherry Tree Cafe Hazratganj Lucknow, cafe in Hazratganj, bakery Lucknow, cakes, coffee, desserts" name="keywords"/><meta content="The Cherry Tree Bakery &amp; Cafe | Hazratganj, Lucknow" property="og:title"/><meta content="Cafe, bakery, desserts, coffee and meals in Hazratganj, Lucknow." property="og:description"/><meta content="website" property="og:type"/><link href='data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"&gt;&lt;text y="52" font-size="52"&gt;🍒&lt;/text&gt;&lt;/svg&gt;' rel="icon" type="image/svg+xml"/>
+<!-- Google Analytics 4: replace G-XXXXXXXXXX with the cafe's GA4 Measurement ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+<style>.instagram-link{display:inline-flex;align-items:center;gap:8px;color:inherit;text-decoration:none}.instagram-link:hover{text-decoration:underline}</style>
+</head>
+<body>
+<nav>
+<div class="logo">🍒 The Cherry Tree<a href="#reviews">Reviews</a></div>
+<div>
+<a href="#menu">Menu</a>
+<a href="#about">About</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+<section class="hero">
+<div class="hero-content">
+<div class="tag">CAFE • BAKERY • DESSERTS</div>
+<h1>The Cherry<br/>Tree Cafe</h1>
+<p>
+            A warm and beautiful cafe experience
+            in the heart of Hazratganj, Lucknow.
+        </p>
+<div class="buttons">
+<a class="primary" href="#menu">Explore Menu</a>
+<a class="secondary" href="#about">Visit Us</a>
+</div>
+</div>
+</section>
+<div aria-label="Cafe quick actions" class="quick-actions">
+<a class="quick-order" href="https://www.swiggy.com/city/lucknow/the-cherry-tree-bakery-and-cafe-hazratganj-rest59530" rel="noopener" target="_blank">🛵 Order Online</a>
+<a class="quick-wa" href="https://wa.me/916389360888?text=Hi%20The%20Cherry%20Tree%20Cafe%2C%20I%20would%20like%20to%20know%20more%20about%20the%20menu." rel="noopener" target="_blank">💬 WhatsApp</a>
+<a class="quick-call" href="tel:+916389360888">📞 Call</a>
+<a class="quick-map" href="https://www.google.com/maps/search/?api=1&amp;query=The%20Cherry%20Tree%20Bakery%20%26%20Cafe%2C%2011%20Habibullah%20Estate%20Road%2C%20Hazratganj%2C%20Lucknow" rel="noopener" target="_blank">📍 Get Directions</a>
+</div>
+<section class="section" id="menu">
+<h2>Our Menu</h2>
+<p class="section-intro">
+        Something delicious for every mood.
+    </p>
+<div class="menu-grid">
+<div class="menu-category">
+<h3>🍳 All Day Breakfast</h3>
+<div class="menu-item">
+<div>
+<div class="menu-item-name">Eggs To Order</div>
+</div>
+<div class="menu-price">₹190</div>
+</div>
+<div class="menu-item">
+<div>
+<div class="menu-item-name">Pancakes</div>
+</div>
+<div class="menu-price">₹260</div>
+</div>
+<div class="menu-item">
+<div>
+<div class="menu-item-name">Mushroom Cheese Melt Toast</div>
+</div>
+<div class="menu-price">₹210</div>
+</div>
+<div class="menu-item">
+<div>
+<div class="menu-item-name">Veg Breakfast Set</div>
+</div>
+<div class="menu-price">₹290</div>
+</div>
+<div class="menu-item">
+<div>
+<div class="menu-item-name">Full English Breakfast</div>
+</div>
+<div class="menu-price">₹300</div>
+</div>
+</div>
+<div class="menu-category">
+<h3>🥪 Sandwiches &amp; Sandos</h3>
+<div class="menu-item">
+<div>
+<div class="menu-item-name">Bombay Masala Sandwich</div>
+</div>
+<div class="menu-price">₹200</div>
+</div>
+<div class="menu-item">
+<div>
+<div class="menu-item-name">Jumbo Chicken Tikka Sandwich</div>
+</div>
+<div class="menu-price">₹190</div>
+</div>
+<div class="menu-item">
+<div>
+<div class="menu-item-name">Cherry Tree Jumbo Chicken Club Sandwich</div>
+</div>
+<div class="menu-price">₹220</div>
+</div>
+</div>
+<div class="menu-category">
+<h3>🍝 All Day Meals</h3>
+<div class="menu-item">
+<div>
+<div class="menu-item-name">Mushroom Stroganoff</div>
+</div>
+<div class="menu-price">₹350</div>
+</div>
+<div class="menu-item">
+<div>
+<div class="menu-item-name">Penne In Tomato Cream Sauce</div>
+<div class="menu-item-desc">Pink Sauce</div>
+</div>
+<div class="menu-price">₹320</div>
+</div>
+<div class="menu-item">
+<div>
+<div class="menu-item-name">Hot &amp; Angry Pasta</div>
+</div>
+<div class="menu-price">₹320</div>
+</div>
+<div class="menu-item">
+<div>
+<div class="menu-item-name">Basil Pesto Spaghetti</div>
+</div>
+<div class="menu-price">₹320</div>
+</div>
+<div class="menu-item">
+<div>
+<div class="menu-item-name">Peri Peri Grilled Chicken</div>
+</div>
+<div class="menu-price">₹370</div>
+</div>
+</div>
+<div class="menu-category">
+<h3>🥗 Salads &amp; Bowls</h3>
+<div class="menu-item">
+<div>
+<div class="menu-item-name">Classic Caesar Salad</div>
+</div>
+<div class="menu-price">₹250</div>
+</div>
+<div class="menu-item">
+<div>
+<div class="menu-item-name">Falafel Protein Bowl</div>
+</div>
+<div class="menu-price">₹280</div>
+</div>
+<div class="menu-item">
+<div>
+<div class="menu-item-name">Blueberry Smoothie Bowl</div>
+</div>
+<div class="menu-price">₹250</div>
+</div>
+<div class="menu-item">
+<div>
+<div class="menu-item-name">Mixed Berry Smoothie Bowl</div>
+</div>
+<div class="menu-price">₹250</div>
+</div>
+</div>
+<div class="menu-category">
+<h3>🍰 Cakes &amp; Desserts</h3>
+<div class="menu-item">
+<div>
+<div class="menu-item-name">Fresh Fruit Cake Eggless</div>
+<div class="menu-item-desc">500g</div>
+</div>
+<div class="menu-price">₹675</div>
+</div>
+<div class="menu-item">
+<div>
+<div class="menu-item-name">Butter Scotch Cake Eggless</div>
+<div class="menu-item-desc">500g</div>
+</div>
+<div class="menu-price">₹625</div>
+</div>
+<div class="menu-item">
+<div>
+<div class="menu-item-name">Eggless Pineapple Pastry</div>
+</div>
+<div class="menu-price">₹95</div>
+</div>
+<div class="menu-item">
+<div>
+<div class="menu-item-name">Blueberry Cheesecake Bento Mini Cake</div>
+</div>
+<div class="menu-price">₹618</div>
+</div>
+<div class="menu-item">
+<div>
+<div class="menu-item-name">Lotus Biscoff Cheese Bento Mini Cake</div>
+</div>
+<div class="menu-price">₹618</div>
+</div>
+</div>
+<div class="menu-category">
+<h3>🍪 Cookies &amp; Spreads</h3>
+<div class="menu-item">
+<div>
+<div class="menu-item-name">All American Choco Chip Cookies</div>
+<div class="menu-item-desc">250g</div>
+</div>
+<div class="menu-price">₹238</div>
+</div>
+<div class="menu-item">
+<div>
+<div class="menu-item-name">Butter Salted Cookies</div>
+<div class="menu-item-desc">250g</div>
+</div>
+<div class="menu-price">₹225</div>
+</div>
+<div class="menu-item">
+<div>
+<div class="menu-item-name">Cashew Jeera Cookies</div>
+<div class="menu-item-desc">250g</div>
+</div>
+<div class="menu-price">₹238</div>
+</div>
+<div class="menu-item">
+<div>
+<div class="menu-item-name">Smooth Peanut Butter</div>
+</div>
+<div class="menu-price">₹162</div>
+</div>
+</div>
+</div>
+<div class="menu-category">
+<h3>☕ Cafe &amp; Drinks</h3>
+<div class="menu-item">
+<div class="menu-item-name">TCT Signature Cold Coffee</div>
+<div class="menu-price">₹210</div>
+</div>
+<div class="menu-item">
+<div class="menu-item-name">Hazelnut Cold Coffee</div>
+<div class="menu-price">₹230</div>
+</div>
+<div class="menu-item">
+<div class="menu-item-name">Iced Americano</div>
+<div class="menu-price">₹160</div>
+</div>
+<div class="menu-item">
+<div class="menu-item-name">Blueberry Blast Smoothie</div>
+<div class="menu-price">₹220</div>
+</div>
+<div class="menu-item">
+<div class="menu-item-name">Mixed Berries Smoothie</div>
+<div class="menu-price">₹220</div>
+</div>
+<div class="menu-item">
+<div class="menu-item-name">Strawberry Peach Smoothie</div>
+<div class="menu-price">₹220</div>
+</div>
+<div class="menu-item">
+<div class="menu-item-name">Classic Mojito</div>
+<div class="menu-price">₹200</div>
+</div>
+<div class="menu-item">
+<div class="menu-item-name">Green Apple Mojito</div>
+<div class="menu-price">₹200</div>
+</div>
+<div class="menu-item">
+<div class="menu-item-name">Watermelon Mojito</div>
+<div class="menu-price">₹200</div>
+</div>
+<div class="menu-item">
+<div class="menu-item-name">Cranberry Mojito</div>
+<div class="menu-price">₹200</div>
+</div>
+<div class="menu-item">
+<div class="menu-item-name">Kit-Kat Milkshake</div>
+<div class="menu-price">₹249</div>
+</div>
+</div>
+<p class="menu-note">
+  Prices shown are based on current online listings and may vary.
+</p>
+
+<div class="menu-actions">
+<a class="primary" href="https://www.swiggy.com/city/lucknow/the-cherry-tree-bakery-and-cafe-hazratganj-rest59530" rel="noopener" target="_blank">🛵 Order Full Menu Online</a>
+<a class="secondary" href="https://wa.me/916389360888?text=Hi%20The%20Cherry%20Tree%20Cafe%2C%20I%20would%20like%20to%20know%20more%20about%20the%20menu." rel="noopener" target="_blank">💬 Ask on WhatsApp</a>
+</div>
+</section>
+<section class="section gallery-section" id="gallery">
+<div class="tag" style="color:#9e2344;letter-spacing:3px;">THE CHERRY TREE • HAZRATGANJ</div>
+<h2>Inside The Cherry Tree</h2>
+<p class="section-intro">A glimpse of the cafe, food and the experience.</p>
+<div class="gallery-grid">
+<a class="gallery-card" href="https://www.swiggy.com/restaurants/lucknow/hazratganj/the-cherry-tree-cafe-1068525/dineout/photos" rel="noopener" target="_blank">
+<img alt="The Cherry Tree Cafe Hazratganj ambience" src="https://dineout-media-assets.swiggy.com/swiggy/image/upload/fl_lossy%2Cf_auto%2Cq_auto%2Cw_900%2Ch_700/DINEOUT_ALL_RESTAURANTS/IMAGES/RESTAURANT_IMAGE_SERVICE/2025/3/30/f4fb2653-b676-459b-8927-7ba1158210b4_image130c756431ab704c7cbb745cd5ef5d1728.JPG"/>
+<div class="gallery-overlay"><h3>Hazratganj Cafe</h3><p>Real outlet ambience • Tap to explore photos</p></div>
+</a>
+<a class="gallery-card" href="https://www.zomato.com/lucknow/the-cherry-tree-cafe-hazratganj/photos" rel="noopener" target="_blank">
+<img alt="Chocolate cake from The Cherry Tree Bakery &amp; Cafe Hazratganj" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy%2Cf_auto%2Cq_auto%2Cw_300%2Ch_300%2Cc_fit/FOOD_CATALOG/IMAGES/CMS/2026/3/20/9af958b6-8b4f-43f5-9f50-d4ce53a0c79e_06f79a0b-9316-4ada-a987-59f3caa78408.jpeg"/>
+<div class="gallery-overlay"><h3>Food Gallery</h3><p>Cakes, desserts &amp; cafe favourites • View more</p></div>
+</a>
+<a class="gallery-card" href="https://www.swiggy.com/restaurants/lucknow/hazratganj/the-cherry-tree-cafe-1068525/dineout/photos" rel="noopener" target="_blank">
+<img alt="Chocolate Oreo drink at The Cherry Tree Cafe Hazratganj" src="https://lh3.googleusercontent.com/imqEgLkFc-zG-a1xredVb-YQ-jKqhqDoTSLcJ_1sVtRbeGG87IpwPtyWTBdJ1rzKBH1xeUla4coZlYs17sJfbRQ55tSRwy_LIUm-t9Dg%3Dh320-rw"/>
+<div class="gallery-overlay"><h3>Cafe &amp; Drinks</h3><p>Cold coffee, shakes &amp; refreshing drinks • Explore more</p></div>
+</a>
+<a class="gallery-card gallery-link-card" href="https://magicpin.in/Lucknow/Hazratganj/Restaurant/The-Cherry-Tree-Cafe/store/124297/photos" rel="noopener" target="_blank">
+<div class="gallery-icon">✨</div>
+<div class="gallery-card-content"><h3>More Photos</h3><p>Browse additional Hazratganj outlet images.</p><span>Open Gallery →</span></div>
+</a>
+</div>
+<div class="gallery-actions">
+<a class="dark" href="https://www.swiggy.com/restaurants/lucknow/hazratganj/the-cherry-tree-cafe-1068525/dineout/photos" rel="noopener" target="_blank">View Swiggy Photos</a>
+<a class="light" href="https://www.zomato.com/lucknow/the-cherry-tree-cafe-hazratganj" rel="noopener" target="_blank">View Zomato Gallery</a>
+<a class="light" href="https://magicpin.in/Lucknow/Hazratganj/Restaurant/The-Cherry-Tree-Cafe/store/124297/photos" rel="noopener" target="_blank">View More Photos</a>
+</div>
+</section>
+<section class="section review-section" id="reviews">
+<div class="tag" style="color:#9e2344;letter-spacing:3px;text-align:center;">GUEST FEEDBACK</div>
+<h2>What Guests Are Saying</h2>
+<p class="section-intro">Recent public feedback and review highlights for the Hazratganj outlet.</p>
+<div class="review-summary">
+<div class="review-stat"><strong>4.3 ★</strong><span>Zomato dining rating</span></div>
+<div class="review-stat"><strong>4.2 ★</strong><span>Zomato delivery rating</span></div>
+<div class="review-stat"><strong>13.6K+</strong><span>delivery ratings</span></div>
+</div>
+<div class="review-grid">
+<article class="review-card"><div class="review-stars">★★★★★</div><p>“The food was wonderful.”</p><small>Sifat Amina · Zomato dining review</small></article>
+<article class="review-card"><div class="review-stars">★★★★★</div><p>“Great food courteous staff.”</p><small>Rahul Saberwal · Zomato dining review</small></article>
+<article class="review-card"><div class="review-stars">★★★★★</div><p>“Good taste and good food.”</p><small>Akshat Kapoor · Zomato dining review</small></article>
+</div>
+<p class="review-source">Ratings and review highlights are from the public Hazratganj listing and can change over time. <a href="https://www.zomato.com/lucknow/the-cherry-tree-bakery-cafe-hazratganj/reviews" rel="noopener" target="_blank">Read more reviews →</a></p>
+</section><section class="section visit" id="about">
+<h2>Visit The Cherry Tree</h2>
+<div class="info-box">
+<p>
+            📍 11, Habibullah Estate Road,<br/>
+            Hazratganj, Lucknow,<br/>
+            Uttar Pradesh 226001
+        </p>
+<br/>
+<p>
+            🕐 Open daily · 8:00 AM – 11:00 PM
+        </p>
+</div>
+</section>
+<section class="section" id="contact">
+<h2>Let's Connect</h2>
+<p class="section-intro">
+        Order online, message us, call us or get directions to the cafe.
+    </p>
+<div class="quick-actions">
+<a class="quick-order" href="https://www.swiggy.com/city/lucknow/the-cherry-tree-bakery-and-cafe-hazratganj-rest59530" rel="noopener" target="_blank">🛵 Order Online</a>
+<a class="quick-wa" href="https://wa.me/916389360888?text=Hi%20The%20Cherry%20Tree%20Cafe%2C%20I%20would%20like%20to%20know%20more%20about%20the%20menu." rel="noopener" target="_blank">💬 WhatsApp</a>
+<a class="quick-call" href="tel:+916389360888">📞 Call</a>
+<a class="quick-map" href="https://www.google.com/maps/search/?api=1&amp;query=The%20Cherry%20Tree%20Bakery%20%26%20Cafe%2C%2011%20Habibullah%20Estate%20Road%2C%20Hazratganj%2C%20Lucknow" rel="noopener" target="_blank">📍 Get Directions</a>
+</div>
+<div aria-label="Mobile quick actions" class="mobile-bottom-bar">
+<a href="tel:+916389360888"><span class="bar-icon">📞</span><span>Call</span></a>
+<a href="https://wa.me/916389360888?text=Hi%20The%20Cherry%20Tree%20Cafe%2C%20I%20would%20like%20to%20know%20more%20about%20the%20menu." rel="noopener" target="_blank"><span class="bar-icon">💬</span><span>WhatsApp</span></a>
+<a href="https://www.swiggy.com/city/lucknow/the-cherry-tree-bakery-and-cafe-hazratganj-rest59530" rel="noopener" target="_blank"><span class="bar-icon">🛵</span><span>Order</span></a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=The%20Cherry%20Tree%20Bakery%20%26%20Cafe%2C%2011%20Habibullah%20Estate%20Road%2C%20Hazratganj%2C%20Lucknow" rel="noopener" target="_blank"><span class="bar-icon">📍</span><span>Directions</span></a>
+</div><button aria-label="Open Cherry Tree Assistant" id="chat-button" title="Cherry Tree Assistant">🤖</button>
+<script>
+const chatButton = document.getElementById("chat-button");
+
+function openCafeChat(){
+  if(document.getElementById("cafe-chat")) return;
+  const chatBox=document.createElement("div");
+  chatBox.id="cafe-chat";
+  chatBox.innerHTML=`
+    <div class="chat-header">
+      <span>🤖 Cherry Tree Assistant</span>
+      <button id="close-chat" aria-label="Close">×</button>
+    </div>
+    <div class="chat-messages" id="chat-messages">
+      <div class="bot-message">Hi! 👋 Welcome to The Cherry Tree Cafe.<br><br>I can help with the <b>menu, popular dishes, timings, location, ordering, WhatsApp and call</b>.</div>
+      <div class="chat-quick">
+        <button data-q="menu">🍽️ Menu</button>
+        <button data-q="popular">⭐ Popular</button>
+        <button data-q="timing">🕐 Timings</button>
+        <button data-q="location">📍 Location</button>
+        <button data-q="order">🛵 Order Online</button>
+        <button data-q="contact">📞 Contact</button>
+      </div>
+    </div>
+    <div class="chat-input">
+      <input id="chat-input" type="text" placeholder="Ask about menu, coffee, cakes..." autocomplete="off">
+      <button id="send-chat" aria-label="Send">➤</button>
+    </div>`;
+  document.body.appendChild(chatBox);
+
+  const input=document.getElementById("chat-input");
+  const messages=document.getElementById("chat-messages");
+  document.getElementById("close-chat").onclick=()=>chatBox.remove();
+
+  function addUser(text){
+    const d=document.createElement("div"); d.className="user-message"; d.textContent=text; messages.appendChild(d);
+  }
+  function addBot(html){
+    const d=document.createElement("div"); d.className="bot-message"; d.innerHTML=html; messages.appendChild(d); messages.scrollTop=messages.scrollHeight;
+  }
+  function reply(raw){
+    const q=raw.toLowerCase().trim();
+    if(!q) return;
+    addUser(raw);
+    let r="I can help with our menu, cakes, coffee & drinks, timings, location, ordering or contact. 😊";
+    if(q.includes("menu")||q.includes("food")||q.includes("breakfast")){
+      r=`<b>🍽️ Menu highlights</b><br>All Day Breakfast • Sandwiches & Sandos • Pasta & Meals • Salads & Bowls • Cakes & Desserts • Cookies • Cafe & Drinks.<br><br><a href="#menu" onclick="document.getElementById('cafe-chat')?.remove()">View full menu ↓</a>`;
+    } else if(q.includes("popular")||q.includes("best")||q.includes("recommend")||q.includes("famous")){
+      r=`<b>⭐ Popular picks</b><br>Caramel Frappe • Cheese Patty • Mac N Cheese • Chicken Tikka Sandwich • Blueberry Cheesecake • Chocolate Truffle.`;
+    } else if(q.includes("cake")||q.includes("dessert")||q.includes("cheesecake")){
+      r=`<b>🍰 Cakes & desserts</b><br>Blueberry Cheesecake • Fresh Fruit Cake • Butter Scotch Cake • Lotus Biscoff Cheesecake • Truffle Cake • Eggless Pineapple Pastry.<br><br>For current availability/prices, use Order Online.`;
+    } else if(q.includes("coffee")||q.includes("drink")||q.includes("beverage")||q.includes("cold coffee")){
+      r=`<b>☕ Cafe & drinks</b><br>TCT Signature Cold Coffee • Hazelnut Cold Coffee • Iced Americano • Caramel Frappe and more drinks & smoothies.`;
+    } else if(q.includes("time")||q.includes("open")||q.includes("timing")||q.includes("close")){
+      r=`<b>🕐 Opening hours</b><br>8:00 AM – 11:00 PM.`;
+    } else if(q.includes("address")||q.includes("location")||q.includes("where")||q.includes("direction")){
+      r=`<b>📍 Location</b><br>11, Habibullah Estate Road, Hazratganj, Lucknow, Uttar Pradesh 226001.<br><br><a href="https://www.google.com/maps/search/?api=1&query=The%20Cherry%20Tree%20Bakery%20%26%20Cafe%2C%2011%20Habibullah%20Estate%20Road%2C%20Hazratganj%2C%20Lucknow" target="_blank" rel="noopener">Open Google Maps →</a>`;
+    } else if(q.includes("order")||q.includes("swiggy")||q.includes("delivery")){
+      r=`<b>🛵 Order Online</b><br>You can order through the Hazratganj online listing.<br><br><a href="https://www.swiggy.com/city/lucknow/the-cherry-tree-bakery-and-cafe-hazratganj-rest59530" target="_blank" rel="noopener">Order Online →</a>`;
+    } else if(q.includes("phone")||q.includes("call")||q.includes("contact")){
+      r=`<b>📞 Contact</b><br>+91 63893 60888<br><br><a href="tel:+916389360888">Call Cafe →</a> &nbsp; <a href="https://wa.me/916389360888" target="_blank" rel="noopener">WhatsApp →</a>`;
+    } else if(q.includes("whatsapp")){
+      r=`<b>💬 WhatsApp</b><br><a href="https://wa.me/916389360888" target="_blank" rel="noopener">Chat on WhatsApp →</a>`;
+    }
+    setTimeout(()=>addBot(r),220);
+    messages.scrollTop=messages.scrollHeight;
+  }
+  document.getElementById("send-chat").onclick=()=>{reply(input.value);input.value="";input.focus();};
+  input.addEventListener("keydown",e=>{if(e.key==="Enter"){e.preventDefault();document.getElementById("send-chat").click();}});
+  chatBox.querySelectorAll(".chat-quick button").forEach(b=>b.onclick=()=>reply(b.dataset.q));
+  input.focus();
+}
+chatButton.addEventListener("click",openCafeChat);
+</script>
+</section>
+<footer style="text-align:center;padding:30px 16px;background:#2b211c;color:#fff;font-size:13px;">
+  <div style="font-size:18px;font-weight:700;margin-bottom:8px;">The Cherry Tree Bakery &amp; Cafe</div>
+  <div style="opacity:.85;margin-bottom:18px;">Hazratganj, Lucknow • 11, Habibullah Estate Road</div>
+  <a href="https://www.instagram.com/thecherrytree_cafe/" target="_blank" rel="noopener noreferrer" aria-label="Follow The Cherry Tree Cafe on Instagram" style="display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;background:linear-gradient(135deg,#f58529,#dd2a7b,#8134af);color:#fff;text-decoration:none;font-weight:700;box-shadow:0 8px 20px rgba(0,0,0,.22);">📸 Follow us on Instagram&nbsp; @thecherrytree_cafe</a>
+  <div style="margin-top:18px;opacity:.65;">© The Cherry Tree Bakery &amp; Cafe</div>
+</footer>
+</body>
+</html>
